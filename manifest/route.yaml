@@ -13,7 +13,7 @@ metadata:
   annotations:
     openshift.io/host.generated: 'true'
 spec:
-  host: dso-sample-dso-sample.apps.ocp1.azure.dso.digital.mod.uk
+  host: dso-sample-deploy-dso-sample-deploy.apps.ocp1.azure.dso.digital.mod.uk
   to:
     kind: Service
     name: dso-sample-deploy
