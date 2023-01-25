@@ -1,22 +1,22 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: dso-sample
-  namespace: dso-sample
+  name: dso-sample-deploy
+  namespace: dso-sample-deploy
   labels:
-    app: dso-sample
-    app.kubernetes.io/component: dso-sample
-    app.kubernetes.io/instance: dso-sample
-    app.kubernetes.io/name: dso-sample
-    app.kubernetes.io/part-of: dso-sample
+    app: dso-sample-deploy
+    app.kubernetes.io/component: dso-sample-deploy
+    app.kubernetes.io/instance: dso-sample-deploy
+    app.kubernetes.io/name: dso-sample-deploy
+    app.kubernetes.io/part-of: dso-sample-deploy
     app.openshift.io/runtime-version: v1
   annotations:
     openshift.io/host.generated: 'true'
 spec:
-  host: dso-sample-dso-sample.apps.ocp2.azure.dso.digital.mod.uk
+  host: dso-sample-dso-sample.apps.ocp1.azure.dso.digital.mod.uk
   to:
     kind: Service
-    name: dso-sample
+    name: dso-sample-deploy
     weight: 100
   port:
     targetPort: 3333-tcp
