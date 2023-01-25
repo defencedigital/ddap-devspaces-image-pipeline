@@ -2,28 +2,28 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: dso-sample
-    app.kubernetes.io/component: dso-sample
-    app.kubernetes.io/instance: dso-sample
-    app.kubernetes.io/name: dso-sample
-    app.kubernetes.io/part-of: dso-sample
-    app.openshift.io/runtime-namespace: dso-sample
-  name: dso-sample
+    app: dso-sample-deploy
+    app.kubernetes.io/component: dso-sample-deploy
+    app.kubernetes.io/instance: dso-sample-deploy
+    app.kubernetes.io/name: dso-sample-deploy
+    app.kubernetes.io/part-of: dso-sample-deploy
+    app.openshift.io/runtime-namespace: dso-sample-deploy
+  name: dso-sample-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dso-sample
+      app: dso-sample-deploy
   template:
     metadata:
       labels:
-        app: dso-sample
-        deploymentconfig: dso-sample
+        app: dso-sample-deploy
+        deploymentconfig: dso-sample-deploy
     spec:
       containers:
-      - image: dso-quay-registry-quay-quay-enterprise.apps.ocp2.azure.dso.digital.mod.uk/dso-project/dso-sample:latest
+      - image: dso-quay-registry-quay-quay-enterprise.apps.ocp1.azure.dso.digital.mod.uk/dso-project/dso-sample:latest
         imagePullPolicy: Always
-        name: dso-sample
+        name: dso-sample-deploy
         ports:
         - containerPort: 3333
           protocol: TCP
