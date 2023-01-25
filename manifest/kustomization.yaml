@@ -7,7 +7,7 @@ kind: Kustomization
 # commonLabels:
 #   version: v1
 images:
-- name: dso-sample
+- name: dso-sample-deploy
   newName: dso-quay-registry-quay-quay-enterprise.apps.ocp1.azure.dso.digital.mod.uk/dso-project/dso-sample
   newTag: v1
 - name: dso-sample:latest
